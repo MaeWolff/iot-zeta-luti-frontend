@@ -6,6 +6,7 @@ type Props = {
   className?: string;
 };
 
+// TODO: remove this file or replace by the real component
 export default function Test({ key, dataGrid, className }: Props) {
   return (
     <div
