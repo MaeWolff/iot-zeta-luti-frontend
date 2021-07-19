@@ -7,11 +7,14 @@ type Props = {
 };
 
 export default function GridLayout({ children }: Props) {
-  // TODO: isolate this logic in dedicated hook `useWindowResize`
-  const [width, setWidth] = useState(window.innerWidth);
+  // NOTE: `- window.innerWidth * 0.1` represents the width of menu (10%)
+  const [width, setWidth] = useState(
+    window.innerWidth - window.innerWidth * 0.1
+  );
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    const handleResize = () =>
+      setWidth(window.innerWidth - window.innerWidth * 0.1);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
