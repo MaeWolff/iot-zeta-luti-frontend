@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Electricity from "../assets/svg/Electricity";
 import Temperature from "../assets/svg/Temperature";
 import Urgency from "../assets/svg/Urgency";
@@ -8,51 +8,83 @@ import People from "../assets/svg/People";
 import Locking from "../assets/svg/Locking";
 import Humidity from "../assets/svg/Humidity";
 
-const Header = styled.header`
-  border: 1px solid red;
+const Container = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${({ theme }) => theme.colors.primary};
   height: 100vh;
-  width: 7%;
-  transition: width 0.3s ease-in;
-  &:hover {
-    width: 15%;
+  width: 100%;
+
+  ul {
+    width: 100%;
   }
 `;
 
+const Item = styled.li<{ isActive: boolean }>`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  background-color: ${({ isActive }) => isActive && "#2785e2"};
+
+  p {
+    margin-top: 1em;
+    font-size: 0.75rem;
+    color: white;
+  }
+`;
+
+const itemsOfMenu = [
+  {
+    path: "/",
+    Icon: Humidity,
+    text: "Humidité",
+  },
+  {
+    path: "/temperature",
+    Icon: Temperature,
+    text: "Température",
+  },
+  {
+    path: "/people",
+    Icon: People,
+    text: "Présence",
+  },
+  {
+    path: "/electricity",
+    Icon: Electricity,
+    text: "Eléctricité",
+  },
+  {
+    path: "/locking",
+    Icon: Locking,
+    text: "Vérouillage",
+  },
+  {
+    path: "/urgency",
+    Icon: Urgency,
+    text: "Urgence",
+  },
+];
+
 export default function Menu() {
+  const location = useLocation();
+
+  const renderItemsOfMenu = itemsOfMenu.map(({ path, Icon, text }) => (
+    <Link to={path} key={`item-${path}`}>
+      <Item isActive={location.pathname === path}>
+        <Icon />
+
+        <p>{text}</p>
+      </Item>
+    </Link>
+  ));
+
   return (
-    <Header>
-      <ul>
-        <li>
-          <Link to="/1">
-            <Humidity />
-          </Link>
-        </li>
-        <li>
-          <Link to="/1">
-            <Temperature />
-          </Link>
-        </li>
-        <li>
-          <Link to="/1">
-            <People />
-          </Link>
-        </li>
-        <li>
-          <Link to="/1">
-            <Electricity />
-          </Link>
-        </li>
-        <li>
-          <Link to="/1">
-            <Locking />
-          </Link>
-        </li>
-        <li>
-          <Link to="/1">
-            <Urgency />
-          </Link>
-        </li>
-      </ul>
-    </Header>
+    <Container>
+      <ul>{renderItemsOfMenu}</ul>
+    </Container>
   );
 }
