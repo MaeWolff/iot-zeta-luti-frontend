@@ -1,16 +1,16 @@
 import React from 'react'
 import Card from "../Card";
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 
 const data = {
   labels: ['9h', '10h', '11h', '12h', '13h', '14h', '15h', '16h', '17h', '18h'],
   datasets: [
     {
       data: [12, 19, 13, 14, 8, 21, 17, 15, 11, 3],
-      label: 'Nombre de personnes',
+      label: 'Température en °C',
       fill: false,
       backgroundColor: '#A5B4FC',
-      borderColor: '#A5B4FC20',
+      borderRadius: 6
     },
   ],
 };
@@ -25,7 +25,7 @@ const options = {
     yAxis: {
       ticks: {
         beginAtZero: true,
-        callback: (value: number) => `${value} pers.`, 
+        callback: (value: number) => `${value} °C`, 
       }
     }
   }
@@ -33,8 +33,8 @@ const options = {
 
 export default function PeopleChart() {
   return (
-    <Card title='Nombre de personnes moyenne par salle' label="Salle C102" isCalendar>
-      <Line data={data} options={options} />
+    <Card title='Température moyenne' label="Établissement" isCalendar>
+      <Bar data={data} options={options} />
     </Card>
   );
 }

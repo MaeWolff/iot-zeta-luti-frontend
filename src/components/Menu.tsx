@@ -40,7 +40,7 @@ const itemsOfMenu = [
   {
     path: "/",
     Icon: Humidity,
-    text: "Humidité",
+    text: "Acceuil",
   },
   {
     path: "/temperature",

@@ -7,7 +7,7 @@ const data = {
   datasets: [
     {
       data: [12, 19, 13, 14, 8, 21, 17, 15, 11, 3],
-      label: 'Nombre de personnes',
+      label: 'salles ouvertes',
       fill: false,
       backgroundColor: '#A5B4FC',
       borderColor: '#A5B4FC20',
@@ -25,7 +25,7 @@ const options = {
     yAxis: {
       ticks: {
         beginAtZero: true,
-        callback: (value: number) => `${value} pers.`, 
+        callback: (value: number) => `${value} salles`, 
       }
     }
   }
@@ -33,7 +33,7 @@ const options = {
 
 export default function PeopleChart() {
   return (
-    <Card title='Nombre de personnes moyenne par salle' label="Salle C102" isCalendar>
+    <Card title='Nombre de salle ouvertes dans la journée par heure' label="Établissement" isCalendar>
       <Line data={data} options={options} />
     </Card>
   );
