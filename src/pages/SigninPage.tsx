@@ -68,8 +68,8 @@ export default function SigninPage() {
               label="Mot de passe*"
               type="password"
               name="password"
-              touched={touched.email}
-              error={errors.email}
+              touched={touched.password}
+              error={errors.password}
             />
 
             <Spacer axis="vertical" size={2} />
