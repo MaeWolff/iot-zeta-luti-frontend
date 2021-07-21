@@ -8,6 +8,10 @@ const Container = styled.main`
   height: 100%;
 `;
 
+const Wrapper = styled.div`
+  padding: 1em 2em;
+`;
+
 type MainLayoutProps = {
   children: ReactNode;
 };
@@ -16,7 +20,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
   return (
     <Container>
       <Menu />
-      {children}
+      <Wrapper>
+        {children}
+      </Wrapper>
     </Container>
   );
 }
