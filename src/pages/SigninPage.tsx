@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
+
 import { Formik, Form } from "formik";
 import InputField from "../components/form/InputField";
 import { SigninValidationSchema } from "../components/form/validationSchemas/SigninValidationSchema";
 import Spacer from "../components/Spacer";
 import HeticLogo from "../assets/svg/HeticLogo";
+import fetchUserLogin from "../common/fetch/fetchUserLogin";
 
 const Container = styled.div`
   height: 100vh;
@@ -40,8 +43,22 @@ type FormValues = {
 };
 
 export default function SigninPage() {
-  function handleSubmit(values: FormValues) {
-    console.log(values);
+  const router = useHistory();
+  const [errorFailedMessage, setErrorFailedMessage] = useState<string>("");
+
+  async function handleSubmit(values: FormValues) {
+    const body = {
+      email: values.email,
+      password: values.password,
+    };
+
+    await fetchUserLogin(body);
+
+    if (localStorage.getItem("userToken")) {
+      router.push("/");
+    } else {
+      setErrorFailedMessage("Les identifiants sont incorrectes");
+    }
   }
 
   return (
@@ -78,6 +95,13 @@ export default function SigninPage() {
           </FormStyled>
         )}
       </Formik>
+
+      {errorFailedMessage && (
+        <>
+          <Spacer axis="vertical" size={1} />
+          <p>{errorFailedMessage}</p>
+        </>
+      )}
     </Container>
   );
 }
