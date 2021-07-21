@@ -8,7 +8,7 @@ import Logout from "../assets/svg/Logout";
 
 const Container = styled.main<{ withMenu?: boolean }>`
   display: grid;
-  grid-template-columns: ${({ withMenu }) => (withMenu ? "10% auto" : "1fr")};
+  grid-template-columns: ${({ withMenu }) => (withMenu ? "12em auto" : "1fr")};
   height: 100vh;
 `;
 
