@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-
 import Calendar from "../assets/svg/Calendar";
 import Dots from "../assets/svg/Dots";
 
@@ -11,12 +10,10 @@ const Container = styled.section`
     padding: 1.25em;
     box-shadow: 0px 0px 3px rgba(230, 232, 249, 0.25);
     border-radius: .5em;
-
     img {
         height: 100%;
         width: 100%;
     }
-
 `;
 
 const Header = styled.header`
@@ -24,7 +21,6 @@ const Header = styled.header`
     justify-content: space-between;
     background: white;
 `;
-
 
 const Title = styled.p`
     padding-bottom: .5em;
@@ -67,7 +63,6 @@ export default function Card({ children, title, label }: Props) {
                     <Calendar/>
                     <DotsStyled />
                 </Aside>
-
             </Header>
             {children}
         </Container>
