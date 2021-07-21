@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { Formik, Form } from "formik";
 import InputField from "../components/form/InputField";
 import { SigninValidationSchema } from "../components/form/validationSchemas/SigninValidationSchema";
+import Spacer from "../components/Spacer";
+import HeticLogo from "../assets/svg/HeticLogo";
 
 const Container = styled.div`
   height: 100vh;
@@ -44,7 +46,7 @@ export default function SigninPage() {
 
   return (
     <Container>
-      signin
+      <HeticLogo />
       <Formik
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => handleSubmit(values)}
@@ -59,6 +61,9 @@ export default function SigninPage() {
               touched={touched.email}
               error={errors.email}
             />
+
+            <Spacer axis="vertical" size={1} />
+
             <InputField
               label="Mot de passe*"
               type="password"
@@ -66,6 +71,8 @@ export default function SigninPage() {
               touched={touched.email}
               error={errors.email}
             />
+
+            <Spacer axis="vertical" size={2} />
 
             <SubmitButton type="submit">Se connecter</SubmitButton>
           </FormStyled>
