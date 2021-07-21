@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Test from "../components/Test";
 import GridLayout from "../components/GridLayout";
-import Menu from "../components/Menu";
+
 
 // TODO: delete me! it's a test
 const TextPrimary = styled.h1`
@@ -16,7 +16,7 @@ const Div = styled.div`
 export default function HomePage() {
   return (
     <div>
-      <Menu/>
+
       <TextPrimary>Zeta Luti Enterprise - homepage</TextPrimary>
       <GridLayout>
         <Div key="a">

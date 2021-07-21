@@ -55,4 +55,8 @@ body {
     font-family: sans-serif;
 	height: 100vh;
 }
+
+a {
+	text-decoration: none;
+}
 `;
