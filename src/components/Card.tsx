@@ -49,9 +49,10 @@ type Props = {
     children: ReactNode;
     title?: string;
     label?: string;
+    isCalendar?: boolean;
 };
 
-export default function Card({ children, title, label }: Props) {
+export default function Card({ children, title, label, isCalendar }: Props) {
     return (
         <Container>
             <Header>
@@ -60,7 +61,7 @@ export default function Card({ children, title, label }: Props) {
                     <Label>{label}</Label>
                 </div>
                 <Aside>
-                    <Calendar/>
+                    {isCalendar && <Calendar/>}
                     <DotsStyled />
                 </Aside>
             </Header>
