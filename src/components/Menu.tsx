@@ -72,19 +72,19 @@ const itemsOfMenu = [
 export default function Menu() {
   const location = useLocation();
 
-  const renderItemsOfMenu = itemsOfMenu.map(({ path, Icon, text }) => (
-    <Link to={path} key={`item-${path}`}>
-      <Item isActive={location.pathname === path}>
-        <Icon />
-
-        <p>{text}</p>
-      </Item>
-    </Link>
-  ));
-
   return (
     <Container>
-      <ul>{renderItemsOfMenu}</ul>
+      <ul>
+        {itemsOfMenu.map(({ path, Icon, text }) => (
+          <Link to={path} key={`item-${path}`}>
+            <Item isActive={location.pathname === path}>
+              <Icon />
+
+              <p>{text}</p>
+            </Item>
+          </Link>
+        ))}
+      </ul>
     </Container>
   );
 }
