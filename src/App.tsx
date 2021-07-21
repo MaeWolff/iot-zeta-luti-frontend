@@ -7,6 +7,7 @@ import MainLayout from "./layouts/MainLayout";
 // Page imports
 // please name the pages with the `Page` mention in component naming
 import HomePage from "./pages/HomePage";
+import SigninPage from "./pages/SigninPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <MainLayout>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/signin" component={SigninPage} />
         </Switch>
       </MainLayout>
     </Router>
