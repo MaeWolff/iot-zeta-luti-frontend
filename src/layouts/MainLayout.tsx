@@ -52,6 +52,10 @@ const InteractiveWrapper = styled.button`
   outline: inherit;
 `;
 
+const Wrapper = styled.div`
+  padding: 1em 2em;
+`;
+
 type MainLayoutProps = {
   children: ReactNode;
 };
@@ -77,7 +81,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
     <Container withMenu={isMenuDisplayed}>
       {isMenuDisplayed && <Menu />}
 
-      <div>
+      <Wrapper>
         {isMenuDisplayed && (
           <Header>
             <TextBold>Tableau de bord - Admin</TextBold>
@@ -99,7 +103,7 @@ export default function MainLayout({ children }: MainLayoutProps) {
         )}
 
         {children}
-      </div>
+      </Wrapper>
     </Container>
   );
 }
