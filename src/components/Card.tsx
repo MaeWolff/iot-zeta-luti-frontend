@@ -5,8 +5,8 @@ import Dots from "../assets/svg/Dots";
 
 
 const Container = styled.section`
-    width: 500px;
     background: white;
+    height: fit-content;
     padding: 1.25em;
     box-shadow: 0px 0px 3px rgba(230, 232, 249, 0.25);
     border-radius: .5em;
