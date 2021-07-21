@@ -54,6 +54,7 @@ table {
 body {
     font-family: sans-serif;
 	height: 100vh;
+	background-color: #F6F7FB;
 }
 
 a {

@@ -13,7 +13,7 @@ export default function Test({ key, dataGrid, className }: Props) {
       className={className}
       key={key}
       data-grid={dataGrid}
-      style={{ backgroundColor: "red" }}
+      style={{width: '600px'}}
     >
       a
     </div>

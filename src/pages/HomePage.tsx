@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 import Test from "../components/Test";
-import GridLayout from "../components/GridLayout";
+import Card from "../components/Card";
+import MapTemp from '../assets/map-temp.jpg';
 
 
 // TODO: delete me! it's a test
@@ -18,14 +19,9 @@ export default function HomePage() {
     <div>
 
       <TextPrimary>Zeta Luti Enterprise - homepage</TextPrimary>
-      <GridLayout>
-        <Div key="a">
-          <Test />
-        </Div>
-
-        <Div key="b">d</Div>
-        <Div key="c">c</Div>
-      </GridLayout>
+      <Card title='Température actuelle' label="27 totos en moyenne">
+        <img src={MapTemp}/>
+      </Card>
     </div>
   );
 }
