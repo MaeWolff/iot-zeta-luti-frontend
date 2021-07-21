@@ -12,8 +12,8 @@ export default function HomePage() {
   return (
     <div>
       <TextPrimary>Zeta Luti Enterprise - homepage</TextPrimary>
-      <Card title='Température actuelle' label="27 totos en moyenne">
-        <img src={MapTemp}/>
+      <Card title='Température actuelle' label="27°C en moyenne">
+        <img src={MapTemp} alt="mapTemp"/>
       </Card>
     </div>
   );
