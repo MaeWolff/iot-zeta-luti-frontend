@@ -20,7 +20,7 @@ const InputStyled = styled(Field)`
   padding: 0.5em;
 
   &::placeholder {
-    color: grey;
+    color: ${({ theme }) => theme.colors.grey};
   }
   &:focus {
     border-radius: 8px;
