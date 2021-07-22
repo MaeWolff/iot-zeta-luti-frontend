@@ -18,7 +18,6 @@ const Container = styled.header`
   width: 100%;
   background-color: white;
   box-shadow: 1px 0px 6px rgba(185, 175, 175, 0.1);
-  padding-top: 1em;
 
   p {
     margin-left: 1em;
@@ -96,7 +95,11 @@ export default function Menu() {
 
   return (
     <Container>
-      <Logo>ZetaLuti.</Logo>
+      <div>
+        <Spacer axis="vertical" size={1} />
+
+        <Logo>ZetaLuti.</Logo>
+      </div>
 
       <ul>
         {itemsOfMenu.map(({ path, Icon, text }) => (
