@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import styled from "styled-components";
 import Calendar from "../assets/svg/Calendar";
 import Dots from "../assets/svg/Dots";
-
+import Spacer from "./Spacer";
 
 const Container = styled.section`
     background: white;
@@ -65,6 +65,9 @@ export default function Card({ children, title, label, isCalendar }: Props) {
                     <DotsStyled />
                 </Aside>
             </Header>
+
+            <Spacer axis='vertical' size={1} />
+
             {children}
         </Container>
     )
