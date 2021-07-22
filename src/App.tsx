@@ -13,6 +13,7 @@ import PeoplePage from "./pages/PeoplePage";
 import ElectricityPage from "./pages/ElectricityPage";
 import UrgencyPage from "./pages/UrgencyPage";
 import TemperaturePage from "./pages/TemperaturePage";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/electricity" component={ElectricityPage} />
           <Route exact path="/urgency" component={UrgencyPage} />
           <Route exact path="/temperature" component={TemperaturePage} />
+          <Route exact path="/admin" component={AdminPage} />
         </Switch>
       </MainLayout>
     </Router>
