@@ -6,22 +6,32 @@ import Temperature from "../assets/svg/Temperature";
 import Urgency from "../assets/svg/Urgency";
 import People from "../assets/svg/People";
 import Locking from "../assets/svg/Locking";
-import Humidity from "../assets/svg/Humidity";
+import Home from "../assets/svg/Home";
 import Spacer from "./Spacer";
 
 const Container = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1em auto;
+  grid-gap: 4em;
   align-self: center;
   height: 100vh;
   width: 100%;
   background-color: white;
   box-shadow: 1px 0px 6px rgba(185, 175, 175, 0.1);
+  padding-top: 1em;
 
+  p {
+    margin-left: 1em;
+  }
   ul {
     width: 100%;
   }
+`;
+
+const Logo = styled.p`
+  color: ${({ theme }) => theme.colors.secondary};
+  font-weight: bold;
+  text-decoration: ${({ theme }) => theme.colors.primary} wavy underline;
 `;
 
 const Item = styled.li<{ isActive: boolean }>`
@@ -34,16 +44,24 @@ const Item = styled.li<{ isActive: boolean }>`
   background-color: ${({ isActive }) => isActive && "#4F46E520"};
 
   p {
-    margin-top: 1em;
+    line-height: 0.75rem;
     font-size: 0.75rem;
-    color: black;
+  }
+
+  svg {
+    width: 1.5em;
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryLight};
+    transition: background 0.2s;
   }
 `;
 
 const itemsOfMenu = [
   {
     path: "/",
-    Icon: Humidity,
+    Icon: Home,
     text: "Acceuil",
   },
   {
@@ -78,6 +96,8 @@ export default function Menu() {
 
   return (
     <Container>
+      <Logo>ZetaLuti.</Logo>
+
       <ul>
         {itemsOfMenu.map(({ path, Icon, text }) => (
           <Link to={path} key={`item-${path}`}>
@@ -85,8 +105,6 @@ export default function Menu() {
               <Spacer axis="horizontal" size={1} />
 
               <Icon />
-
-              <Spacer axis="horizontal" size={0.5} />
 
               <p>{text}</p>
             </Item>

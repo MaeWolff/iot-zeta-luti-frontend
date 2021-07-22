@@ -55,9 +55,15 @@ body {
     font-family: sans-serif;
 	height: 100vh;
 	background-color: #F6F7FB;
+	color: #111011;
+}
+
+p {
+	color: #111011;
 }
 
 a {
 	text-decoration: none;
+		color:#111011;
 }
 `;

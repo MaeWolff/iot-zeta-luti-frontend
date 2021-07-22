@@ -1,19 +1,32 @@
-import Card from "../components/Card";
-import MapTemp from "../assets/map-temp.jpg";
-
+import styled from "styled-components";
 import AuthenticatedRoute from "../layouts/AuthenticatedRoute";
-import GridLayout from "../layouts/GridLayout";
+
+const HighlightText = styled.p`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 1.25rem;
+  line-height: 2rem;
+`;
+
+const BoldText = styled.span`
+  font-weight: bold;
+`;
 
 export default function HomePage() {
+  const date = new Date().toLocaleDateString("fr-FR", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+  });
+
   return (
     <AuthenticatedRoute>
-      <GridLayout>
-        <Card title='Température actuelle' label="27°C en moyenne" isCalendar>
-        <img src={MapTemp} alt="mapTemp"/>
-      </Card>
-
-
-      </GridLayout>
+      <div>
+        <HighlightText>Bienvenue sur votre tableau de bord,</HighlightText>
+        <p>
+          Nous sommes actuellement le <BoldText>{date}</BoldText>
+        </p>
+      </div>
     </AuthenticatedRoute>
   );
 }
