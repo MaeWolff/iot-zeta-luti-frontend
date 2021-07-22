@@ -22,6 +22,7 @@ const Header = styled.div`
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
+  margin-bottom: 1em;
 `;
 
 const Profile = styled.div`
