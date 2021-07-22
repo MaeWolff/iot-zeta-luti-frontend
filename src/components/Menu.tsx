@@ -6,7 +6,7 @@ import Temperature from "../assets/svg/Temperature";
 import Urgency from "../assets/svg/Urgency";
 import People from "../assets/svg/People";
 import Locking from "../assets/svg/Locking";
-import Humidity from "../assets/svg/Humidity";
+import Home from "../assets/svg/Home";
 import Spacer from "./Spacer";
 
 const Container = styled.header`
@@ -34,16 +34,20 @@ const Item = styled.li<{ isActive: boolean }>`
   background-color: ${({ isActive }) => isActive && "#4F46E520"};
 
   p {
-    margin-top: 1em;
+    line-height: 0.75rem;
     font-size: 0.75rem;
     color: black;
+  }
+
+  svg {
+    width: 1.5em;
   }
 `;
 
 const itemsOfMenu = [
   {
     path: "/",
-    Icon: Humidity,
+    Icon: Home,
     text: "Acceuil",
   },
   {
@@ -86,7 +90,7 @@ export default function Menu() {
 
               <Icon />
 
-              <Spacer axis="horizontal" size={0.5} />
+              <Spacer axis="horizontal" size={1} />
 
               <p>{text}</p>
             </Item>
