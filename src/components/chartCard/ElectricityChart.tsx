@@ -9,7 +9,7 @@ const data = {
       data: [1893, 2100, 2200, 2250, 1943, 670, 1034],
       label: 'Consomation électrique en kWh',
       fill: false,
-      backgroundColor: '#A5B4FC',
+      backgroundColor: '#4F46E5',
       borderRadius: 6
     },
   ],

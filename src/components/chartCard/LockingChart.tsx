@@ -9,8 +9,8 @@ const data = {
       data: [12, 19, 13, 14, 8, 21, 17, 15, 11, 3],
       label: 'salles ouvertes',
       fill: false,
-      backgroundColor: '#A5B4FC',
-      borderColor: '#A5B4FC20',
+      backgroundColor: '#4F46E5',
+      borderColor: '#4F46E520',
     },
   ],
 };
