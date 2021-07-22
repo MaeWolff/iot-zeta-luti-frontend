@@ -9,7 +9,7 @@ const data = {
       data: [12, 19, 13, 14, 8, 21, 17, 15, 11, 3],
       label: 'Température en °C',
       fill: false,
-      backgroundColor: '#A5B4FC',
+      backgroundColor: '#4F46E5',
       borderRadius: 6
     },
   ],
