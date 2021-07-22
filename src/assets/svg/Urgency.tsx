@@ -1,13 +1,18 @@
 import React from "react";
 
-export default function Urgency() {
+type UrgencyProps = {
+  color?: string;
+  className?: string;
+}
+
+export default function Urgency({color = "#4F46E5", className}: UrgencyProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
+      className={className}
       fill="none"
       viewBox="0 0 24 24"
-      stroke="#4F46E5"
+      stroke={color}
     >
       <path
         strokeLinecap="round"
