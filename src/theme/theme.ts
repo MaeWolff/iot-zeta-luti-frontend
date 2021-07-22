@@ -9,6 +9,7 @@ const theme: DefaultTheme = {
     secondaryLight: "#F0544F20",
 
     grey: "#D1D5DB",
+    black: "#111011",
   },
 };
 

@@ -46,7 +46,6 @@ const Item = styled.li<{ isActive: boolean }>`
   p {
     line-height: 0.75rem;
     font-size: 0.75rem;
-    color: black;
   }
 
   svg {
