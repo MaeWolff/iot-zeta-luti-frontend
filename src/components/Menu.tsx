@@ -10,18 +10,28 @@ import Home from "../assets/svg/Home";
 import Spacer from "./Spacer";
 
 const Container = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1em auto;
+  grid-gap: 4em;
   align-self: center;
   height: 100vh;
   width: 100%;
   background-color: white;
   box-shadow: 1px 0px 6px rgba(185, 175, 175, 0.1);
+  padding-top: 1em;
 
+  p {
+    margin-left: 1em;
+  }
   ul {
     width: 100%;
   }
+`;
+
+const Logo = styled.p`
+  color: ${({ theme }) => theme.colors.secondary};
+  font-weight: bold;
+  text-decoration: ${({ theme }) => theme.colors.primary} wavy underline;
 `;
 
 const Item = styled.li<{ isActive: boolean }>`
@@ -41,6 +51,11 @@ const Item = styled.li<{ isActive: boolean }>`
 
   svg {
     width: 1.5em;
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.colors.primaryLight};
+    transition: background 0.2s;
   }
 `;
 
@@ -82,6 +97,8 @@ export default function Menu() {
 
   return (
     <Container>
+      <Logo>ZetaLuti.</Logo>
+
       <ul>
         {itemsOfMenu.map(({ path, Icon, text }) => (
           <Link to={path} key={`item-${path}`}>
@@ -89,8 +106,6 @@ export default function Menu() {
               <Spacer axis="horizontal" size={1} />
 
               <Icon />
-
-              <Spacer axis="horizontal" size={1} />
 
               <p>{text}</p>
             </Item>
