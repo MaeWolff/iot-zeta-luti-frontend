@@ -65,16 +65,6 @@ const itemsOfMenu = [
     text: "Acceuil",
   },
   {
-    path: "/temperature",
-    Icon: Temperature,
-    text: "Température",
-  },
-  {
-    path: "/people",
-    Icon: People,
-    text: "Présence",
-  },
-  {
     path: "/electricity",
     Icon: Electricity,
     text: "Eléctricité",
@@ -83,6 +73,16 @@ const itemsOfMenu = [
     path: "/locking",
     Icon: Locking,
     text: "Vérouillage",
+  },
+  {
+    path: "/temperature",
+    Icon: Temperature,
+    text: "Température",
+  },
+  {
+    path: "/people",
+    Icon: People,
+    text: "Présence",
   },
   {
     path: "/urgency",
