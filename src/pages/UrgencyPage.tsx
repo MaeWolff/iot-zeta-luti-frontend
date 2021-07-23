@@ -1,11 +1,11 @@
 import ComposedCard from "../components/cards/ComposedCard";
-import MapTemp from "../assets/map-temp.jpg";
 import GridLayout from "../layouts/GridLayout";
 import BaseCard from "../components/cards/BaseCard";
 import Urgency from "../assets/svg/Urgency";
 import AuthenticatedRoute from "../layouts/AuthenticatedRoute";
 import styled from "styled-components";
 import Spacer from "../components/Spacer";
+import UrgencyMap from "../assets/svg/UrgencyMap";
 
 const UrgencyWrapper = styled.div`
   display: flex;
@@ -20,15 +20,15 @@ const UrgencySvg = styled(Urgency)`
 const IncidenciesList = [
   {
     type: 'dangerous',
-    text: "Température élevée (C102)",
+    text: "Température élevée (A002)",
   },
   {
     type: 'dangerous',
-    text: "Température élevée (A100)",
+    text: "Température élevée (B003)",
   },
   {
     type: 'dangerous',
-    text: "Salle ouverte hors horraire d'ouvertue (C010)",
+    text: "Salle ouverte hors horraire d'ouvertue (C005)",
   },
   {
     type: 'warning',
@@ -46,10 +46,10 @@ export default function UrgencyPage() {
       <GridLayout>
         <ComposedCard
           title="Nombre d’incident en cours"
-          label="2 en ce moment"
+          label="3 en ce moment"
           isCalendar
         >
-          <img src={MapTemp} alt="mapTemp" />
+          <UrgencyMap />
         </ComposedCard>
 
         <div>
