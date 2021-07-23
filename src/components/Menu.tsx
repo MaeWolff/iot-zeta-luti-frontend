@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 import Electricity from "../assets/svg/Electricity";
 import Temperature from "../assets/svg/Temperature";
+import Admin from "../assets/svg/Admin";
 import Urgency from "../assets/svg/Urgency";
 import People from "../assets/svg/People";
 import Locking from "../assets/svg/Locking";
@@ -87,6 +88,11 @@ const itemsOfMenu = [
     path: "/urgency",
     Icon: Urgency,
     text: "Urgence",
+  },
+  {
+    path: "/admin",
+    Icon: Admin,
+    text: "Admin",
   },
 ];
 
