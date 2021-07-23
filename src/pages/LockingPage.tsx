@@ -2,7 +2,8 @@ import ComposedCard from "../components/cards/ComposedCard";
 import LockingChart from "../components/chartCard/LockingChart";
 import AuthenticatedRoute from "../layouts/AuthenticatedRoute";
 import GridLayout from "../layouts/GridLayout";
-import MapTemp from "../assets/map-temp.jpg";
+import LockingyMap from "../assets/svg/LockingMap";
+
 
 export default function LockingPage() {
   return (
@@ -13,7 +14,7 @@ export default function LockingPage() {
           label="5 ouvertes en ce moment"
           isCalendar
         >
-          <img src={MapTemp} alt="mapTemp" />
+          <LockingyMap/>
         </ComposedCard>
 
         <LockingChart />
