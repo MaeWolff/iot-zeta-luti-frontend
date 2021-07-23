@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SvgStyled = styled.svg`
     //FIX WIDTH
 `
-const Rect = styled.rect<{isOpen?: boolean}>`
+const Rect = styled.rect`
     fill: white;
     stroke: #231f20;
     stroke-miterlimit: 10;
