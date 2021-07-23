@@ -3,7 +3,6 @@ import GridLayout from "../layouts/GridLayout";
 import Spacer from "../components/Spacer";
 import BaseCard from "../components/cards/BaseCard";
 import styled from "styled-components";
-import Admin from "../assets/svg/Admin";
 import Urgency from "../assets/svg/Urgency";
 import ComposedCard from "../components/cards/ComposedCard";
 
