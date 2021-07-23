@@ -10,7 +10,7 @@ export default function ElectricityPage() {
       <GridLayout>
         <ComposedCard
           title="Nombre de salle éclairée"
-          label="27 en ce moment"
+          label="5 en ce moment"
           isCalendar
         >
           <ElectricityMap />

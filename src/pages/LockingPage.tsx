@@ -11,7 +11,7 @@ export default function LockingPage() {
       <GridLayout>
         <ComposedCard
           title="Statut des salles vérouillées ou ouvertes"
-          label="5 ouvertes en ce moment"
+          label="6 ouvertes en ce moment"
           isCalendar
         >
           <LockingyMap/>
