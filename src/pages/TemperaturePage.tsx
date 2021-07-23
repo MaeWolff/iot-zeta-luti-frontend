@@ -2,7 +2,8 @@ import ComposedCard from "../components/cards/ComposedCard";
 import TemperatureChart from "../components/chartCard/TemperatureChart";
 import AuthenticatedRoute from "../layouts/AuthenticatedRoute";
 import GridLayout from "../layouts/GridLayout";
-import MapTemp from "../assets/map-temp.jpg";
+import TemperatureMap from "../assets/svg/TemperatureMap";
+
 
 export default function TemperaturePage() {
   return (
@@ -13,7 +14,7 @@ export default function TemperaturePage() {
           label="27°C en moyenne"
           isCalendar
         >
-          <img src={MapTemp} alt="mapTemp" />
+          <TemperatureMap/>
         </ComposedCard>
 
         <TemperatureChart />
