@@ -71,14 +71,14 @@ export default function HomePage() {
           <Spacer axis="horizontal" size={1} />
 
           <BaseCard>
-            <p>Température moyenne</p>
+            <p>Taux d'humidité moyen</p>
 
             <Spacer axis="vertical" size={1} />
 
             <BiggerText>
-              <span>🔥</span>
+              <span>💧</span>
               <Spacer axis="horizontal" size={0.5} />
-              24°C
+              70%
             </BiggerText>
           </BaseCard>
         </FlexRow>
