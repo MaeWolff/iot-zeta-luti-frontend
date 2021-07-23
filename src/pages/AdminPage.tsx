@@ -90,45 +90,53 @@ export default function AdminPage() {
             ))}
           </div>
         </ComposedCard>
-        <ComposedCard title="Créer un nouveau profil" label="Rôle : Étudiant">
-          <div>
-            <NewProfilForm>
-              <FullName>
+        <div>
+          <ComposedCard title="Créer un nouveau profil" label="Rôle : Étudiant">
+            <div>
+              <NewProfilForm>
+                <FullName>
+                  <div>
+                    <label htmlFor="">Prénom : </label>
+                    <input type="text" placeholder="Ex: Marco" />
+                  </div>
+                  <div>
+                    <label htmlFor="">Nom : </label>
+                    <input type="text" placeholder="Ex: De Amorin" />
+                  </div>
+                </FullName>
                 <div>
-                  <label htmlFor="">Prénom : </label>
-                  <input type="text" placeholder="Ex: Marco" />
+                  <label htmlFor="">Adresse e-mail : </label>
+                  <input type="e-mail" placeholder="exemple@exemple.com" />
                 </div>
                 <div>
-                  <label htmlFor="">Nom : </label>
-                  <input type="text" placeholder="Ex: De Amorin" />
+                  <label htmlFor="">Mot de passe : </label>
+                  <input type="password" placeholder="" />
                 </div>
-              </FullName>
+                <div>
+                  <label htmlFor="">Promo : </label>
+                  <input type="text" placeholder="Ex: Web 2" />
+                </div>
+
+                <input type="submit" value="Créer" />
+              </NewProfilForm>
+            </div>
+          </ComposedCard>
+
+          <Spacer axis="vertical" size={1} />
+
+          <ComposedCard title="Supprimer un profil" label="Rôle : Étudiant">
+            <DeleteProfil>
               <div>
-                <label htmlFor="">Adresse e-mail : </label>
-                <input type="e-mail" placeholder="exemple@exemple.com" />
-              </div>
-              <div>
-                <label htmlFor="">Mot de passe : </label>
-                <input type="password" placeholder="" />
-              </div>
-              <div>
-                <label htmlFor="">Promo : </label>
-                <input type="text" placeholder="Ex: Web 2" />
+                <label htmlFor="">Nom et prénom</label>
+                <input type="text" placeholder="Ex: Marco De Amorin" />
               </div>
 
-              <input type="submit" value="Créer" />
-            </NewProfilForm>
-          </div>
-        </ComposedCard>
-        <ComposedCard title="Supprimer un profil" label="Rôle : Étudiant">
-          <DeleteProfil>
-            <div>
-              <label htmlFor="">Nom et prénom</label>
-              <input type="text" placeholder="Ex: Marco De Amorin" />
-            </div>
-            <input type="submit" value="Supprimer" />
-          </DeleteProfil>
-        </ComposedCard>
+              <Spacer axis="vertical" size={1} />
+
+              <input type="submit" value="Supprimer" />
+            </DeleteProfil>
+          </ComposedCard>
+        </div>
       </GridLayout>
     </AuthenticatedRoute>
   );
